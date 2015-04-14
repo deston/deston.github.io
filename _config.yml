@@ -8,7 +8,7 @@ relative_permalinks: true
 
 # Setup
 title:            Deston
-tagline:          'A Jekyll theme'
+tagline:          '方寸之地'
 description:      '方寸之地'
 url:              http://deston.github.io
 baseurl:          /
