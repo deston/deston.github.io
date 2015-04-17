@@ -222,7 +222,7 @@ This corresponds to Activity.onSaveInstanceState(Bundle) and most of the discuss
 	04-17 13:04:52.621      930-930/com.example.Test I/MyFragment﹕ -----------onResume-----------
 	04-17 13:04:52.621      930-930/com.example.Test I/MyFragment﹕ -----------onResume-----------
 
-由竖屏切换到横屏的生命周期变化，可以看到fragment的生命周期依然是随着activity一起的。可是我们当仔细看的时候，会发现一些奇怪的现象，为什么fragment在onDetch，然后重建时会打印出两个onAttach，两个onCreate，两个onStart，两个onResume，这是怎么一回事？  
+由竖屏切换到横屏的生命周期变化，可以看到fragment的生命周期依然是随着activity一起的。可是我们当仔细看的时候，会发现一些奇怪的现象，为什么fragment在onDetch之后会打印出两个onAttach，两个onCreate，两个onStart，两个onResume，这是怎么一回事？  
 
 有两种可能性：  
 
