@@ -265,5 +265,5 @@ This corresponds to Activity.onSaveInstanceState(Bundle) and most of the discuss
 - 尽量避免在activity的生命周期中去创建fragment。
 
 
-感觉以上几个办法都各有问题，不是很完美，水平有限，如果谁有更好的办法欢迎和我讨论：destonlau@gmail.com
+感觉以上几个办法都各有问题，不是很完美，水平有限，如果谁有更好的办法欢迎和我讨论。
 
