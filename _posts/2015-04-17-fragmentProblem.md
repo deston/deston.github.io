@@ -4,7 +4,7 @@ title: 关于Activity和Fragment销毁重建的一些问题
 ---
 
 
-众说周知，Activity提供了onSaveInstanceState和onRestoreInstanceState方法，用于当activity被系统销毁时保存一些数据，首先我们来看看他们被触发的时机。  
+众所周知，Activity提供了onSaveInstanceState和onRestoreInstanceState方法，用于当activity被系统销毁时保存一些数据，首先我们来看看他们被触发的时机。  
 onSaveInstanceState和onRetsoreInstanceState方法名字看起来很像，给人的感觉就是一对好基友，结对出现。可惜不是这样。  
 看看android文档中对onSaveInstanceState的解释：  
 >This method is called before an activity may be killed so that when it comes back some time in the future it can restore its state. For example, if activity B is launched in front of activity A, and at some point activity A is killed to reclaim resources, activity A will have a chance to save the current state of its user interface via this method so that when the user returns to activity A, the state of the user interface can be restored via onCreate(Bundle) or onRestoreInstanceState(Bundle).             
@@ -31,9 +31,6 @@ This corresponds to Activity.onSaveInstanceState(Bundle) and most of the discuss
 
 
 简单来说就是和activity保持一致。并且fragment是没有onRestoreInstanceState方法的，保存的数据在fragment重建时从onCreate, onCreateView或者onActivityCreated中获取。  
-
-	sdada
-	sdad
 
 
 我们知道fragment和acitivity的生命周期是相似的，并且fragment的生命周期是跟着activity一起走的，我们可以测试一下。 
